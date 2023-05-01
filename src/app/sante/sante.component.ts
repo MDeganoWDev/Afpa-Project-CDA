@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { SanteService } from '../service/sante.service';
-import { Ingredient, Product } from '../models/product';
+import {  Product } from '../models/product';
 
-// import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-sante',
@@ -12,8 +12,8 @@ import { Ingredient, Product } from '../models/product';
 export class SanteComponent implements OnInit {
 
   products!: Product;
-  ingredients!: Ingredient[];
-  //products$!: Observable<Product[]>;
+  // ingredients!: Ingredient[];
+ 
 
   constructor(private santeService: SanteService) { }
 

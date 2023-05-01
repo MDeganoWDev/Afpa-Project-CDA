@@ -145,7 +145,154 @@ style="height:72px;float:left;margin-right:1rem;" alt="icon" class="filter-grey"
   <p><img src="https://static.openfoodfacts.org/images/misc/high.svg"> Sel en grande quantité ({{ products.product.nutriments.salt.toFixed(2)}}%)</p>
 </div>
 
-<img src="{{products.product.image_nutrition_url}}">
+<img src="{{products.product.image_nutrition_url}}"><br>
 
 <!-- <pre>{{products | json}}</pre>  -->
 
+
+
+<!-- tableau -->
+
+<img src="https://static.openfoodfacts.org/images/icons/dist/scale-balance.svg" 
+style="height:72px;float:left;margin-right:1rem;" alt="icon" class="filter-grey">
+<p>Tableau nutritionnel</p>
+<br>
+<div>
+  <table border="1" >
+    <colgroup>
+      <col width="250" >
+    </colgroup>
+  <tr>        
+    <th >Tableau nutritionnel</th>
+    <th>Tel que vendu <br> {{products.product.nutrition_data_per}}/ 100 ml</th>
+    <th>Tel que vendu <br> par portion ({{products.product.nutrition_data_prepared_per}})</th>
+    <th>Comparé à : {{products.product.generic_name_fr}}</th>
+  </tr>
+
+  <tr>
+    <td>Energie</td>
+    <td>
+      {{products.product.nutriments.energy_100g}}
+      {{products.product.nutriments.energy_unit}}<br> 
+      ({{products.product.nutriments['energy-kcal']}} {{products.product.nutriments['energy-kcal_unit']}})                   
+    </td>
+    <td>
+      {{products.product.nutriments['energy-kj_serving']}} {{products.product.nutriments.energy_unit}}<br>
+      ({{products.product.nutriments['energy-kcal']}} {{products.product.nutriments['energy-kcal_unit']}})
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Matières grasses</td>
+    <td>
+      {{products.product.nutriments.fat_100g}}
+      {{products.product.nutriments.fat_unit}}           
+    </td>
+    <td>
+      {{products.product.nutriments.fat_serving}}
+      {{products.product.nutriments.fat_unit}}
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Acides gras saturés</td>
+    <td>
+      {{products.product.nutriments['saturated-fat_100g']}}
+      {{products.product.nutriments['saturated-fat_unit']}}
+    </td>
+    <td>
+      {{products.product.nutriments['saturated-fat_serving']}}
+      {{products.product.nutriments['saturated-fat_unit']}}
+    </td>
+    <td></td>
+  </tr>
+    
+  <tr>
+    <td>Glucides</td>
+    <td>
+      {{products.product.nutriments.carbohydrates_100g}}
+      {{products.product.nutriments.carbohydrates_unit}}
+    </td>         
+    <td>
+      {{products.product.nutriments.carbohydrates_serving}}
+      {{products.product.nutriments.carbohydrates_unit}}
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Sucres</td>
+    <td>
+      {{products.product.nutriments.sugars_100g}}
+      {{products.product.nutriments.sugars_unit}}
+    </td>
+    <td>
+      {{products.product.nutriments.sugars_serving}}
+      {{products.product.nutriments.sugars_unit}}
+    </td>
+    <td></td>
+  </tr>
+    
+  <tr>
+    <td>Fibres alimentaires</td>
+    <td>
+      {{products.product.nutriments.fiber_100g}}
+      {{products.product.nutriments.fiber_unit}}
+    </td>
+    <td>
+      {{products.product.nutriments.fiber_serving}}
+      {{products.product.nutriments.fiber_unit}}
+    </td>
+    <td></td>
+  </tr>
+    
+  <tr>
+    <td>Proteïnes</td>
+    <td>
+      {{products.product.nutriments.proteins_100g}}
+      {{products.product.nutriments.proteins_unit}}
+    </td>
+    <td>
+      {{products.product.nutriments.proteins_serving}}
+      {{products.product.nutriments.proteins_unit}}
+    </td>
+    <td></td>
+  </tr>
+    
+  <tr>
+    <td>Sel</td>
+    <td>
+      {{products.product.nutriments.salt_100g}}
+      {{products.product.nutriments.salt_unit}}
+    </td>
+    <td>
+      {{products.product.nutriments.salt_serving}}
+      {{products.product.nutriments.salt_unit}}
+    </td>
+    <td></td>
+  </tr>
+    
+  <tr>
+    <td>
+    Fruits, légumes, noix 
+    et huiles de colza, noix et olive 
+    (estimation par analyse de la 
+    liste des ingrédients)
+    </td>
+    <td>
+      {{products.product.nutriments['fruits-vegetables-nuts-estimate-from-ingredients_100g']}}%
+    </td>
+    <td>
+      {{products.product.nutriments['fruits-vegetables-nuts-estimate-from-ingredients_serving']}}%
+    </td>
+    <td></td>
+  </tr>
+              
+</table>
+
+
+</div>
+<br><br><br>
+<p><b>Taille d'une portion: </b>{{products.product.nutrition_data_per}}</p> 
