@@ -14,6 +14,9 @@ export class FicheProduitComponent {
 
   titleFicheProduit = 'Produit XXXX';
   produit!: Produit;
+  nutriScorePhrase: string = "";
+  novaScorePhrase: string = "";
+  ecoScorePhrase: string = "";
 
   constructor(private produitService: ProduitService, private route: ActivatedRoute,
     private title: Title, private router: Router) {
@@ -32,11 +35,86 @@ export class FicheProduitComponent {
           const dataP = data.product;
 
           this.produit = new Produit(
-            dataP._id, dataP.image_url, dataP.product_name, dataP.GeneriqueName, dataP.quantity,
-            dataP.packaging, dataP.brands, dataP.categories, dataP.labels,
-            dataP.ingredients_original_tags, dataP.code, dataP.link, dataP.stores, 
-            dataP.countries,dataP.nutriscore_grade, dataP.nova_group,dataP.ecoscore_grade
+            dataP._id,
+            dataP.image_url,
+            dataP.product_name,
+            dataP.code,
+            dataP.quantity,
+            dataP.packaging,
+            dataP.brands,
+            dataP.categories,
+            dataP.labels,
+            dataP.origins_from_origins_field,
+            dataP.manufacturing_places,
+            dataP.emb_codes,
+            dataP.link,
+            dataP.stores, 
+            dataP.countries,
+            dataP.nutriscore_grade,
+            dataP.nova_group,
+            dataP.ecoscore_grade
           );
+
+          if (this.produit.nutriscore) {
+            switch(this.produit.nutriscore) {
+              case "a":
+                this.nutriScorePhrase = "Très bonne qualité nutritionnelle";
+                break;
+              case "b":
+                this.nutriScorePhrase = "Bonne qualité nutritionnelle";
+                break;
+              case "c":
+                this.nutriScorePhrase = "Qualité nutrionnelle moyenne";
+                break;
+              case "d":
+                this.nutriScorePhrase = "Mauvaise qualité nutritionnelle";
+                break;
+              case "e":
+                this.nutriScorePhrase = "Mauvaise qualité nutritionnelle";
+                break;
+            }
+          }
+
+          if (this.produit.nova) {
+            switch(this.produit.nova) {
+              case 1:
+                this.novaScorePhrase = "Aliments non transformés ou transformés minimalement";
+                break;
+              case 2:
+                this.novaScorePhrase = "Ingrédients culinaires transformés";
+                break;
+              case 3:
+                this.novaScorePhrase = "Aliments transformés";
+                break;
+              case 4:
+                this.novaScorePhrase = "Produits alimentaires et boissons ultra-transformés";
+                break;
+
+            }
+          }
+
+          if (this.produit.ecoscore) {
+            switch(this.produit.ecoscore) {
+              case "a":
+                this.ecoScorePhrase = "Très faible impact environnemental";
+                break;
+              case "b":
+                this.ecoScorePhrase = "Faible impact environnemental";
+                break;
+              case "c":
+                this.ecoScorePhrase = "Impact modéré sur l'environnement";
+                break;
+              case "d":
+                this.ecoScorePhrase = "Impact environnemental élevé";
+                break;
+              case "e":
+                this.ecoScorePhrase = "Impact environnemental très élevé";
+                break;
+              default:
+                this.ecoScorePhrase = "Impact environnemental inconnu";
+            }
+          }
+      
         } else {
           alert('Aucune description à afficher')
           this.router.navigateByUrl('');
