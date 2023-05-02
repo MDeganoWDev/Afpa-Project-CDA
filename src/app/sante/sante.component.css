@@ -1,12 +1,64 @@
-
-table, tr {         
-    border-collapse: collapse;
-    width: 150;
+table,
+tr {
+  border-collapse: collapse;
+  width: 150;
 }
-th, td {
-    text-align: left;
-    padding: 8px;
+th,
+td {
+  text-align: left;
+  padding: 8px;
 }
 tr:nth-child(even) {
-    background-color: #7c818017;
+  background-color: #7c818017;
 }
+.liste {
+  display: none; /* cache la liste par défaut */
+}
+
+.liste.show {
+  display: block; /* affiche la liste quand la classe "show" est ajoutée */
+}
+.container {
+  display: flex;
+  flex-direction: column;
+
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 90%;
+}
+
+.div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #c8a4a4;
+  box-shadow: 0 10px 4px rgba(40, 37, 37, 0.2);
+}
+
+
+.div:hover  {
+  
+  background-color: #b4a7a7;
+  cursor: pointer;
+}
+.image{
+  margin-right: 0;
+}
+
+.right-align {
+  margin-left: auto;
+}
+.flex-container {
+  display: flex;
+  align-items: center;
+
+}
+
+

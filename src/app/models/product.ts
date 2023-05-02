@@ -49,8 +49,21 @@
       nutrition_data_per: string;
       nutrition_data_prepared_per: string;
       generic_name_fr: string;
+      selected_images:{
+        nutrition:{
+        display:{
+fr:any;
+        }
+        }
+      ingredients: {
+        display:{
+          fr:any;
+        }
+     
+      }
     }
-   
+    
+   }
   }
   // export interface Ingredient {
   //   // id: string;
@@ -61,4 +74,11 @@
   //   // vegan: string;
   //   // vegetarian: string;
   //   // Ajoutez d'autres propriétés ici si nécessaire
+  //   display:{
+  //     fr:any;
+  //   }
   // }
+  export interface ShowList {
+    [key: string]: boolean;
+  }
+  
