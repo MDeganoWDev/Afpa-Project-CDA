@@ -18,6 +18,7 @@ tr:nth-child(even) {
 .liste.show {
   display: block; /* affiche la liste quand la classe "show" est ajoutée */
 }
+<<<<<<< HEAD
 .container {
   display: flex;
   flex-direction: column;
@@ -62,3 +63,5 @@ tr:nth-child(even) {
 }
 
 
+=======
+>>>>>>> 9acd48399a483c30902292c9159baf995e34f233

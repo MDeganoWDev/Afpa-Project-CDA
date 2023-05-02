@@ -24,7 +24,11 @@ export class SanteComponent implements OnInit {
     });
 
   }
+<<<<<<< HEAD
   showList: ShowList = { div1: false, div2: false,div3:false,div4: false,div5: false,div6: false };
+=======
+  showList: ShowList = { div1: false, div2: false,div3:false,div4: false,div5: false };
+>>>>>>> 9acd48399a483c30902292c9159baf995e34f233
 
   toggleList(listName: string) {
     this.showList[listName] = !this.showList[listName];
