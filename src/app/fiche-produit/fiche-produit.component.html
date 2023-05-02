@@ -1,0 +1,50 @@
+<div class="card-div flex-row-center">
+  <div class="card-div">
+    <img *ngIf="produit" [src]="produit.image_url" alt="" />
+  </div>
+  <div class="card-div bg-color pd-20">
+    <h1 *ngIf="produit">Nom du produit : {{ produit.product_name }}</h1>
+    <P *ngIf="produit"> Nom générique :{{ produit.GeneriqueName }}</P>
+    <P *ngIf="produit">Quantitée : {{ produit.quantity }}</P>
+    <P *ngIf="produit">packaging : {{ produit.packaging }}</P>
+    <P *ngIf="produit">Marque : {{ produit.brands }}</P>
+    <P *ngIf="produit">categories : {{ produit.categories }}</P>
+    <P *ngIf="produit">labels : {{ produit.labels }}</P>
+  </div>
+</div>
+
+<div class="card-div">
+  <p class="pd-20">Correspondant à vos préférences</p>
+  <div class="flex-row-center">
+    <div class="card-div bg-color pd-20">
+      <a href=""> <!-- renvoi vers la fiche santé -->
+        <img
+          src="https://static.openfoodfacts.org/images/attributes/nutriscore-{{
+            produit.nutriscore
+          }}.svg"
+          alt="Image nutriscore"
+        />
+        <div>
+          <h4>Nutri-score {{ produit.nutriscore | uppercase }}</h4>
+          <span>test</span>
+        </div>
+      </a>
+    </div>
+    <div class="card-div bg-color pd-20"><a href=""> <!-- renvoi vers la fiche santé -->
+      <img
+          src="https://static.openfoodfacts.org/images/attributes/nova-group-{{
+            produit.nova
+          }}.svg"
+          alt="Image nova"
+        />
+    </a></div>
+    <div class="card-div bg-color pd-20"><a href=""> <!-- renvoi vers la fiche santé -->
+      <img
+          src="https://static.openfoodfacts.org/images/attributes/ecoscore-{{
+            produit.ecoscore
+          }}.svg"
+          alt="Image nova"
+        />
+    </a></div>
+  </div>
+</div>
