@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { SanteService } from '../service/sante.service';
-import {  Product } from '../models/product';
+import {  ShowList,Product } from '../models/product';
 
 
 
@@ -24,6 +24,13 @@ export class SanteComponent implements OnInit {
     });
 
   }
+  showList: ShowList = { div1: false, div2: false,div3:false,div4: false,div5: false };
+
+  toggleList(listName: string) {
+    this.showList[listName] = !this.showList[listName];
+  }
+  
+  
  
 }
 
