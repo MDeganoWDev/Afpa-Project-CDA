@@ -12,15 +12,18 @@ import { Subscription } from 'rxjs';
 })
 export class FicheProduitComponent {
 
-  titleFicheProduit = 'Produit XXXX';
+  titleFicheProduit = '';
   produit!: Produit;
   nutriScorePhrase: string = "";
   novaScorePhrase: string = "";
   ecoScorePhrase: string = "";
+  bg_color_nutri!: string;
+  bg_color_nova!: string;
+  bg_color_ecoscore!: string;
 
   constructor(private produitService: ProduitService, private route: ActivatedRoute,
     private title: Title, private router: Router) {
-    this.title.setTitle(this.titleFicheProduit);
+
   }
 
   ngOnInit() {
@@ -48,7 +51,7 @@ export class FicheProduitComponent {
             dataP.manufacturing_places,
             dataP.emb_codes,
             dataP.link,
-            dataP.stores, 
+            dataP.stores,
             dataP.countries,
             dataP.nutriscore_grade,
             dataP.nova_group,
@@ -56,27 +59,34 @@ export class FicheProduitComponent {
           );
 
           if (this.produit.nutriscore) {
-            switch(this.produit.nutriscore) {
+            switch (this.produit.nutriscore) {
               case "a":
                 this.nutriScorePhrase = "Très bonne qualité nutritionnelle";
+                this.bg_color_nutri = '#FBDDDD';
                 break;
               case "b":
                 this.nutriScorePhrase = "Bonne qualité nutritionnelle";
+                this.bg_color_nutri = '#91a292';
                 break;
               case "c":
                 this.nutriScorePhrase = "Qualité nutrionnelle moyenne";
+                this.bg_color_nutri = '#91ab92';
                 break;
               case "d":
                 this.nutriScorePhrase = "Mauvaise qualité nutritionnelle";
+                this.bg_color_nutri = '#91ab92';
                 break;
               case "e":
                 this.nutriScorePhrase = "Mauvaise qualité nutritionnelle";
+                this.bg_color_nutri = '#91ab92';
                 break;
+              default:
+                this.ecoScorePhrase = "Données manquantes pour calculer le nutriscore";
             }
           }
 
           if (this.produit.nova) {
-            switch(this.produit.nova) {
+            switch (this.produit.nova) {
               case 1:
                 this.novaScorePhrase = "Aliments non transformés ou transformés minimalement";
                 break;
@@ -89,12 +99,14 @@ export class FicheProduitComponent {
               case 4:
                 this.novaScorePhrase = "Produits alimentaires et boissons ultra-transformés";
                 break;
+              default:
+                this.ecoScorePhrase = "Degré de transformation des aliments inconnu";
 
             }
           }
 
           if (this.produit.ecoscore) {
-            switch(this.produit.ecoscore) {
+            switch (this.produit.ecoscore) {
               case "a":
                 this.ecoScorePhrase = "Très faible impact environnemental";
                 break;
@@ -114,7 +126,8 @@ export class FicheProduitComponent {
                 this.ecoScorePhrase = "Impact environnemental inconnu";
             }
           }
-      
+          this.titleFicheProduit = this.produit.product_name;
+          this.title.setTitle(this.titleFicheProduit);
         } else {
           alert('Aucune description à afficher')
           this.router.navigateByUrl('');
@@ -127,9 +140,6 @@ export class FicheProduitComponent {
       }
     });
   }
-
-  
-
 
   ngOnDestroy() {
     // this.SubscriptionProduit.unsubscribe() // l'Observable émet la réponse et complète immédiatement ;

@@ -8,16 +8,16 @@ a {
   justify-content: space-evenly;
 }
 .flex-row-center-space-betwee {
-    display: flex;
-    justify-content: space-between;
-  }
+  display: flex;
+  justify-content: space-evenly;
+}
 img {
   border-radius: 20px;
 }
 .card-div {
-  background-color: aliceblue;
+  background-color: white;
   margin: 10px;
-  /* padding:  5px 10px; */
+  padding: 5px 10px;
   border-radius: 20px;
 }
 .bg-color {
@@ -30,8 +30,11 @@ img {
 .mr-20 {
   margin-right: 20px;
 }
-.m-auto {
-  margin: auto;
+.mb-20 {
+  margin-bottom: 20px;
+}
+.m-auto-lr {
+  margin: 20px auto;
 }
 
 .w-8 {
@@ -46,3 +49,5 @@ img {
 .w75 {
   width: 75%;
 }
+
+
