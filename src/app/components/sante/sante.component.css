@@ -1,7 +1,8 @@
 table,
 tr {
   border-collapse: collapse;
-  width: 150;
+  width: 50%;
+  margin: auto;
 }
 th,
 td {
@@ -18,7 +19,6 @@ tr:nth-child(even) {
 .liste.show {
   display: block; /* affiche la liste quand la classe "show" est ajoutée */
 }
-<<<<<<< HEAD
 .container {
   display: flex;
   flex-direction: column;
@@ -31,26 +31,30 @@ tr:nth-child(even) {
   width: 90%;
 }
 
-.div {
+.child_container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   margin: 1rem;
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #c8a4a4;
+  background-color: #ffffff;
   box-shadow: 0 10px 4px rgba(40, 37, 37, 0.2);
 }
+.row{
+  display: flex;
+  flex-direction: row;
+}
 
-
-.div:hover  {
+.child_container:hover  {
   
-  background-color: #b4a7a7;
+  background-color: #d8d8d8;
   cursor: pointer;
 }
 .image{
   margin-right: 0;
+ 
 }
 
 .right-align {
@@ -63,5 +67,3 @@ tr:nth-child(even) {
 }
 
 
-=======
->>>>>>> 9acd48399a483c30902292c9159baf995e34f233
