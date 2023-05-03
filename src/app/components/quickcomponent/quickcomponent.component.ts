@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HomeService } from './home.service';
+import { HomeService } from 'src/app/services/home.service';
 
 @Component({
   selector: 'app-quickcomponent',
