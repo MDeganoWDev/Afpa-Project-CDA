@@ -5,20 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FicheProduitComponent } from './Components/fiche-produit/fiche-produit.component';
-import { PageAcceuilComponent } from './page-acceuil/page-acceuil.component';
+import { HomeService } from './services/home.service';
+import { QuickcomponentComponent } from './components/quickcomponent/quickcomponent.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     FicheProduitComponent,
-    PageAcceuilComponent
+    QuickcomponentComponent, 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [HomeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
