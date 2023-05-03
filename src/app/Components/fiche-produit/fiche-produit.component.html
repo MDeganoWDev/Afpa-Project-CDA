@@ -23,9 +23,16 @@
   <h1 class="pd-20">Correspondance avec vos préférences</h1>
   <div class="flex-row-center-space-betwee">
     <div class="flex-row-center-space-betwee">
-      <div class="card-div bg-color pd-20" appHover [ngStyle]="{'background-color': bg_color_nutri}">
+      <div class="card-div bg-color pd-20" [ngClass]="{
+        'nutriscore-A': produit.nutriscore === 'a',
+        'nutriscore-B': produit.nutriscore === 'b',
+        'nutriscore-C': produit.nutriscore === 'c',
+        'nutriscore-D': produit.nutriscore === 'd',
+        'nutriscore-E': produit.nutriscore === 'e'
+      }">
         <a class="flex-row-center" href=""> <!-- renvoi vers la fiche santé -->
-          <img class="mr-20 w-8 h-4" *ngIf="produit && produit.nutriscore" [src]="'https://static.openfoodfacts.org/images/attributes/nutriscore-' + produit.nutriscore + '.svg'" alt="Image nutriscore" />
+          <img class="mr-20 w-8 h-4" *ngIf="produit && produit.nutriscore" [src]="'https://static.openfoodfacts.org/images/attributes/nutriscore-'
+           + produit.nutriscore + '.svg'" alt="Image nutriscore" />
           <div *ngIf="produit && produit.nutriscore">
             <h2>Nutri-score {{ produit.nutriscore | uppercase }}</h2>
             <span id="descriptionScore">{{ nutriScorePhrase }}</span>
@@ -34,22 +41,35 @@
       </div>
     </div>
     <div class="flex-row-center-space-betwee">
-      <div class="card-div bg-color pd-20" appHover [ngStyle]="{'background-color': bg_color_nova}">
+      <div class="card-div bg-color pd-20" [ngClass]="{
+        'nova-group-1': produit.nova === 1,
+        'nova-group-2': produit.nova === 2,
+        'nova-group-3': produit.nova === 3,
+        'nova-group-4': produit.nova === 4,
+      }">
         <a class="flex-row-center" href=""> <!-- renvoi vers la fiche santé -->
-          <img class="mr-20 w-4 h-4" *ngIf="produit && produit.nova" [src]="'https://static.openfoodfacts.org/images/attributes/nova-group-' + produit.nova + '.svg'" alt="Image novascore" />
+          <img class="mr-20 w-4 h-4" *ngIf="produit && produit.nova" [src]="'https://static.openfoodfacts.org/images/attributes/nova-group-'
+           + produit.nova + '.svg'" alt="Image novascore" />
           <div *ngIf="produit && produit.nova">
-            <h4>Nutri-score {{ produit.nova }}</h4>
+            <h4>Nova-score {{ produit.nova }}</h4>
             <span id="descriptionScore">{{ novaScorePhrase }}</span>
           </div>
         </a>
       </div>
     </div>
     <div class="flex-row-center-space-betwee">
-      <div class="card-div bg-color pd-20" appHover [ngStyle]="{'background-color': bg_color_ecoscore}">
+      <div class="card-div bg-color pd-20"[ngClass]="{
+        'ecoscore-A': produit.ecoscore === 'a',
+        'ecoscore-B': produit.ecoscore === 'b',
+        'ecoscore-C': produit.ecoscore === 'c',
+        'ecoscore-D': produit.ecoscore === 'd',
+        'ecoscore-E': produit.ecoscore === 'e'
+      }">
         <a class="flex-row-center" href=""> <!-- renvoi vers la fiche santé -->
-          <img class="mr-20 w-8 h-4" *ngIf="produit && produit.ecoscore" [src]="'https://static.openfoodfacts.org/images/attributes/ecoscore-' + produit.ecoscore + '.svg'" alt="Image ecoscore" />
+          <img class="mr-20 w-8 h-4" *ngIf="produit && produit.ecoscore" [src]="'https://static.openfoodfacts.org/images/attributes/ecoscore-'
+           + produit.ecoscore + '.svg'" alt="Image ecoscore" />
           <div *ngIf="produit && produit.ecoscore">
-            <h4>Nutri-score {{ produit.ecoscore | uppercase }}</h4>
+            <h4>Eco-score {{ produit.ecoscore | uppercase }}</h4>
             <span id="descriptionScore">{{ ecoScorePhrase }}</span>
           </div>
         </a>

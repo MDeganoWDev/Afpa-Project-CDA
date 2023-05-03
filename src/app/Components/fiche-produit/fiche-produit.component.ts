@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ProduitService } from '../produit.service';
-import { Produit } from '../model/produit.model';
+import { ProduitService } from '../../produit.service';
+import { Produit } from '../../model/produit.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { Subscription } from 'rxjs';
@@ -62,27 +62,21 @@ export class FicheProduitComponent {
             switch (this.produit.nutriscore) {
               case "a":
                 this.nutriScorePhrase = "Très bonne qualité nutritionnelle";
-                this.bg_color_nutri = '#E8F4ED';
                 break;
               case "b":
                 this.nutriScorePhrase = "Bonne qualité nutritionnelle";
-                this.bg_color_nutri = '#EFF7E6';
                 break;
               case "c":
                 this.nutriScorePhrase = "Qualité nutrionnelle moyenne";
-                this.bg_color_nutri = '#F9F4E5';
                 break;
               case "d":
                 this.nutriScorePhrase = "Mauvaise qualité nutritionnelle";
-                this.bg_color_nutri = '#FCF1E7';
                 break;
               case "e":
                 this.nutriScorePhrase = "Mauvaise qualité nutritionnelle";
-                this.bg_color_nutri = '#FDEEEE';
                 break;
               default:
                 this.ecoScorePhrase = "Données manquantes pour calculer le nutriscore";
-                this.bg_color_nutri = '#EDEDED';
             }
           }
 
@@ -90,23 +84,18 @@ export class FicheProduitComponent {
             switch (this.produit.nova) {
               case 1:
                 this.novaScorePhrase = "Aliments non transformés ou transformés minimalement";
-                this.bg_color_nova = '#E8F4ED';
                 break;
               case 2:
                 this.novaScorePhrase = "Ingrédients culinaires transformés";
-                this.bg_color_nova = '#F9F4E5';
                 break;
               case 3:
                 this.novaScorePhrase = "Aliments transformés";
-                this.bg_color_nova = '#FCF1E7';
                 break;
               case 4:
                 this.novaScorePhrase = "Produits alimentaires et boissons ultra-transformés";
-                this.bg_color_nova = '#FDEEEE';
                 break;
               default:
                 this.ecoScorePhrase = "Degré de transformation des aliments inconnu";
-                this.bg_color_nova = '#EDEDED';
 
             }
           }
@@ -115,27 +104,21 @@ export class FicheProduitComponent {
             switch (this.produit.ecoscore) {
               case "a":
                 this.ecoScorePhrase = "Très faible impact environnemental";
-                this.bg_color_ecoscore = '#E8F4ED';
                 break;
               case "b":
                 this.ecoScorePhrase = "Faible impact environnemental";
-                this.bg_color_ecoscore = '#EFF7E6';
                 break;
               case "c":
                 this.ecoScorePhrase = "Impact modéré sur l'environnement";
-                this.bg_color_ecoscore = '#F9F4E5';
                 break;
               case "d":
                 this.ecoScorePhrase = "Impact environnemental élevé";
-                this.bg_color_ecoscore = '#FCF1E7';
                 break;
               case "e":
                 this.ecoScorePhrase = "Impact environnemental très élevé";
-                this.bg_color_ecoscore = '#FDEEEE';
                 break;
               default:
                 this.ecoScorePhrase = "Impact environnemental inconnu";
-                this.bg_color_ecoscore = '#EDEDED';
             }
           }
           this.titleFicheProduit = this.produit.product_name;
