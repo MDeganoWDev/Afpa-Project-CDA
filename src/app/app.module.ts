@@ -3,23 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeService } from './services/home.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FicheProduitComponent } from './Components/fiche-produit/fiche-produit.component';
+import { HomeService } from './services/home.service';
 import { QuickcomponentComponent } from './components/quickcomponent/quickcomponent.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    FicheProduitComponent,
     QuickcomponentComponent, 
-    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule, 
-    
-
+    HttpClientModule,
   ],
   providers: [HomeService],
   bootstrap: [AppComponent]
