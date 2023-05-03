@@ -13,11 +13,11 @@ export class HoverDirective {
 
   @HostListener('mouseenter') onMouseEnter() {
     this.oldBackgroundColor = this.el.nativeElement.style.backgroundColor;
-    this.changeBg('brightness(80%)');
+    this.changeBg('saturate(7)');
   }
 
   @HostListener('mouseleave') onMouseLeave() {
-    this.changeBg('brightness(100%)');
+    this.changeBg('saturate(1)');
   }
 
   private changeBg(filter: string) {
