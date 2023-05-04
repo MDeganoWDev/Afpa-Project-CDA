@@ -7,7 +7,6 @@ import { QuickcomponentComponent } from './Components/quickcomponent/quickcompon
 const routes: Routes = [
   { path: '', component: QuickcomponentComponent },
   { path: 'produit/:id', component: FicheProduitComponent },
-
 ];
 
 @NgModule({
