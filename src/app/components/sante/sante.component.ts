@@ -1,8 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Router } from '@angular/router';
+import { Component} from '@angular/core';
+import { ActivatedRoute,} from '@angular/router';
+
+import { ProduitService } from 'src/app/services/produit.service';
 import { Product, ShowList } from 'src/app/models/product';
-import { ProduitService} from 'src/app/service/sante.service';
 
 
 @Component({
@@ -10,7 +10,7 @@ import { ProduitService} from 'src/app/service/sante.service';
   templateUrl: './sante.component.html',
   styleUrls: ['./sante.component.css']
 })
-export class SanteComponent implements OnInit {
+export class SanteComponent {
 
   products!: Product;
 

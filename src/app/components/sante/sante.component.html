@@ -7,7 +7,6 @@
       <img src="https://static.openfoodfacts.org/images/icons/dist/ingredients.svg"
          style="height:72px;float:left;margin-right:1rem;" alt="icon" class="filter-grey">
          <p *ngIf="showList['div6']">{{ products.product.ingredients_text }}</p>
-         <p *ngIf="showList['div6']">{{ products.product.ingredients_text }}</p>
   </div>
   <div class="image" style="width:20%">
     <img src="{{products.product.selected_images.ingredients.display.fr}}" alt="" class="right-align" style="object-fit: contain;width: 100%;">
@@ -18,7 +17,6 @@
 <div class="child_container" (click)="toggleList('div1')">
   <div>
   <h3 >Transformation des aliments</h3>
-    <div  [ngSwitch]="products.product.nova_group">
     <div  [ngSwitch]="products.product.nova_group">
       <div *ngSwitchCase="1" >
         <img src="https://static.openfoodfacts.org/images/attributes/nova-group-1.svg" style="height:72px;float:left;margin-right:1rem;" alt="icon">
@@ -36,14 +34,11 @@
        
         <img src="https://static.openfoodfacts.org/images/attributes/nova-group-4.svg" style="height:72px;float:left;margin-right:1rem;" alt="icon">
         <p style="color:brown;">Aliments ultra-transformés</p>
-        <p style="color:brown;">Aliments ultra-transformés</p>
       </div>
       <div *ngSwitchDefault>
         <p class="">Degré de transformation des aliments inconnu</p>
         <img src="https://static.openfoodfacts.org/images/attributes/nova-group-unknown.svg" style="height:72px;float:left;margin-right:1rem;" alt="icon">
       </div>
-    </div>
-    <div class="flex-container ">
     </div>
     <div class="flex-container ">
       <ul *ngIf="showList['div1']">Les produits alimentaires sont classés en 4 groupes selon leur degré de transformation :
@@ -58,7 +53,6 @@
 </div>
   </div>
 </div>
-</div>
 
 <div class="child_container">
   <div >
@@ -67,17 +61,13 @@
     <div *ngSwitchCase="'a'">
       <img src="https://static.openfoodfacts.org/images/attributes/nutriscore-a.svg" style="height:72px;float:left;margin-right:1rem;" alt="icon">
       <span class="panel_title_card">Très bonne qualité nutritionnelle</span>
-      <span class="panel_title_card">Très bonne qualité nutritionnelle</span>
     </div>
     <div *ngSwitchCase="'b'">
       <img src="https://static.openfoodfacts.org/images/attributes/nutriscore-b.svg" style="height:72px;float:left;margin-right:1rem;" alt="icon">
       <span>Bonne qualité nutritionnelle</span>
     </div>
-      <span>Bonne qualité nutritionnelle</span>
-    </div>
     <div *ngSwitchCase="'c'">
       <img src="https://static.openfoodfacts.org/images/attributes/nutriscore-c.svg" style="height:72px;float:left;margin-right:1rem;" alt="icon">
-      <span class="panel_title_card">Qualité nutritionnelle moyenne</span>
       <span class="panel_title_card">Qualité nutritionnelle moyenne</span>
     </div>
     <div *ngSwitchCase="'d'">
@@ -85,11 +75,9 @@
      
       <img src="https://static.openfoodfacts.org/images/attributes/nutriscore-d.svg" style="height:72px;float:left;margin-right:1rem;" alt="icon">
       <span style="color:brown;">Mauvaise qualité nutritionnelle</span>
-      <span style="color:brown;">Mauvaise qualité nutritionnelle</span>
     </div>
     <div *ngSwitchCase="'e'">
       <img src="https://static.openfoodfacts.org/images/attributes/nutriscore-e.svg" style="height:72px;float:left;margin-right:1rem;" alt="icon">
-      <span >Mauvaise qualité nutritionnelle</span>
       <span >Mauvaise qualité nutritionnelle</span>
     </div><br>
   </div>
@@ -116,7 +104,6 @@
       <b>Recommandation : </b>
       <p>Limiter la consommation de matières grasses et graisses saturées</p>
       <p>Choisissez des produits à faible teneur en gras et en gras saturés.</p> 
-      <p> Source : <a href="https://www.nhs.uk/live-well/eat-well/food-types/different-fats-nutrition/"> National Health Service UK (NHS) - Graisse : les faits </a></p>
       <p> Source : <a href="https://www.nhs.uk/live-well/eat-well/food-types/different-fats-nutrition/"> National Health Service UK (NHS) - Graisse : les faits </a></p>
     </ul>
   </div>
@@ -195,7 +182,6 @@
 </div>
 <div class="image" style="width:40%">
  <img src="{{products.product.selected_images.nutrition.display.fr}}" class="right-align;" style="object-fit: contain;width: 70%;">
-</div>
 </div>
 
 <!-- tableau -->
