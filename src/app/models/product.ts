@@ -1,7 +1,6 @@
 ﻿export interface Product {
     code: string;
     product: {
-      // ingredients: Ingredient[];
       image_ingredients_url:any;
       nova_group:number;
       ingredients_text:string;
@@ -13,14 +12,13 @@
         sugars:number;
         salt:number;
         "saturated-fat":number;
-        //energy_serving_value=energy_serving*3,55
         energy_100g: number;
         energy_value: number;
         'energy-kj_serving': number;
         'energy-kcal': number;
         'energy-kcal_unit': string;
         energy_serving: number;    
-        energy_unit: string;//kcal
+        energy_unit: string;
         fat_100g: number;
         fat_serving: number;
         fat_unit: string;
@@ -65,19 +63,6 @@ fr:any;
     
    }
   }
-  // export interface Ingredient {
-  //   // id: string;
-  //   // percent_estimate: number;
-  //   // percent_max: number;
-  //   // percent_min: number;
-  //   // text: string;
-  //   // vegan: string;
-  //   // vegetarian: string;
-  //   // Ajoutez d'autres propriétés ici si nécessaire
-  //   display:{
-  //     fr:any;
-  //   }
-  // }
   export interface ShowList {
     [key: string]: boolean;
   }

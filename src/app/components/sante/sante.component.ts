@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { SanteService } from '../service/sante.service';
-import {  ShowList,Product } from '../models/product';
-
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+import { Product, ShowList } from 'src/app/models/product';
+import { ProduitService} from 'src/app/service/sante.service';
 
 
 @Component({
@@ -12,29 +13,20 @@ import {  ShowList,Product } from '../models/product';
 export class SanteComponent implements OnInit {
 
   products!: Product;
-  // ingredients!: Ingredient[];
- 
 
-  constructor(private santeService: SanteService) { }
+  constructor(private route: ActivatedRoute, private produitService:ProduitService) { }
 
   ngOnInit() {
-    this.santeService.getData().subscribe((data: Product) => {
+    const id = this.route.snapshot.params['id'];
+    this.produitService.getProduitById(id).subscribe((data: any) => {
       this.products = data;
-      console.log(this.products);
+      console.log(data);
     });
-
   }
-<<<<<<< HEAD
+  
   showList: ShowList = { div1: false, div2: false,div3:false,div4: false,div5: false,div6: false };
-=======
-  showList: ShowList = { div1: false, div2: false,div3:false,div4: false,div5: false };
->>>>>>> 9acd48399a483c30902292c9159baf995e34f233
-
   toggleList(listName: string) {
     this.showList[listName] = !this.showList[listName];
   }
   
-  
- 
 }
-
