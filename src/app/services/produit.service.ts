@@ -1,11 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProduitService {
+
+  private product = new BehaviorSubject<any>({});
+  currentProduct = this.product.asObservable();
+
+  setData(product: any) {
+    this.product.next(product);
+  }
+
   constructor(private http: HttpClient) {}
 
   getHomeData(): Observable<any> {

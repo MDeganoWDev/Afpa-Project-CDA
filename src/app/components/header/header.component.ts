@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MoteurRechercheService } from 'src/app/services/moteur-recherche.service';
+import { ProduitService } from 'src/app/services/produit.service';
 
 @Component({
   selector: 'app-header',
@@ -10,10 +10,10 @@ export class HeaderComponent {
 
   chercheProduit!: string;
 
-  constructor(private moteurRechercheService: MoteurRechercheService) {}
+  constructor(private produitService: ProduitService) {}
 
   chercher(){
-    this.moteurRechercheService.setData(this.chercheProduit);
+    this.produitService.setData(this.chercheProduit);
   }
 
 }
