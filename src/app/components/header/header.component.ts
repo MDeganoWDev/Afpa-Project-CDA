@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MoteurRechercheService } from 'src/app/services/moteur-recherche.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-header',
@@ -7,13 +7,11 @@ import { MoteurRechercheService } from 'src/app/services/moteur-recherche.servic
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-
-  chercheProduit!: string;
-
-  constructor(private moteurRechercheService: MoteurRechercheService) {}
-
-  chercher(){
-    this.moteurRechercheService.setData(this.chercheProduit);
-  }
-
+  
+  constructor(private http: HttpClient) {}
+  searchTerm !: string;
+  searchProducts(searchTerm: string) {
+    // this.searchTerm=searchTerm;
+    return this.http.get('https://world.openfoodfacts.org/products', { params: { q: searchTerm } });
+}
 }
