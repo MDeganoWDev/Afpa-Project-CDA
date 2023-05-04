@@ -9,7 +9,6 @@ import { ProduitService } from './services/produit.service';
 import { FicheProduitComponent } from './components/fiche-produit/fiche-produit.component';
 import { QuickcomponentComponent } from './components/quickcomponent/quickcomponent.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

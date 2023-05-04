@@ -17,7 +17,7 @@ export class Produit {
       public stores: string = "",
       public countries: string = "",
       public nutriscore: string = "",
-      public nova: number = 0,
+      public nova: string | number = 0,
       public ecoscore: string = ""
    ) { }
 }
