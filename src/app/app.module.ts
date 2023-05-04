@@ -1,5 +1,7 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';//
+
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'; 
 import {MatIconModule} from '@angular/material/icon';
@@ -13,13 +15,28 @@ import { ProduitService } from './services/produit.service';
 import { FicheProduitComponent } from './components/fiche-produit/fiche-produit.component';
 import { QuickcomponentComponent } from './components/quickcomponent/quickcomponent.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { ProduitService } from './service/sante.service';
+
+
+import { SanteComponent } from './components/sante/sante.component';
+
+
+
+import { SanteComponent } from './components/sante/sante.component';
+
+
+
 @NgModule({
   declarations: [
+
     AppComponent,
+    SanteComponent,
     HeaderComponent, 
     FooterComponent,
     FicheProduitComponent,
     QuickcomponentComponent,
+
 
   ],
   imports: [
