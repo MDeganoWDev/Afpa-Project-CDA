@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { MoteurRechercheService } from './services/moteur-recherche.service';
-import { ListRechercheComponent } from './components/list-recherche/list-recherche.component';
-
+import { FicheProduitComponent } from './components/fiche-produit/fiche-produit.component';
+import { QuickcomponentComponent } from './components/quickcomponent/quickcomponent.component';
 
 const routes: Routes = [
-  { path: 'recherche/:recherche', component: ListRechercheComponent},
+  { path: '', component: QuickcomponentComponent },
+  { path: 'produit/:id', component: FicheProduitComponent },
+
 ];
 
 @NgModule({
