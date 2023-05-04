@@ -1,11 +1,19 @@
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';//
 
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'; 
+import {MatIconModule} from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProduitService } from './services/produit.service';
+import { FicheProduitComponent } from './components/fiche-produit/fiche-produit.component';
+import { QuickcomponentComponent } from './components/quickcomponent/quickcomponent.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ProduitService } from './service/sante.service';
@@ -21,18 +29,25 @@ import { SanteComponent } from './components/sante/sante.component';
 
 @NgModule({
   declarations: [
-    AppComponent,SanteComponent
-    
+
+    AppComponent,
+    SanteComponent,
+    HeaderComponent, 
+    FooterComponent,
+    FicheProduitComponent,
+    QuickcomponentComponent,
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    FormsModule
+    FormsModule, 
+    HttpClientModule, 
+    BrowserAnimationsModule,
+    MatIconModule,
   ],
-  providers: [
-    ProduitService
-  ],
+  providers: [ProduitService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
