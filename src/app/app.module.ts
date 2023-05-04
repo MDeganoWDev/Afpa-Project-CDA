@@ -6,25 +6,28 @@ import {MatIconModule} from '@angular/material/icon';//
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProduitService } from './services/produit.service';
+import { FicheProduitComponent } from './components/fiche-produit/fiche-produit.component';
+import { QuickcomponentComponent } from './components/quickcomponent/quickcomponent.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    FicheProduitComponent,
+    QuickcomponentComponent, 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, //
+    FormsModule, 
     HttpClientModule, 
     BrowserAnimationsModule,
-    MatIconModule //
+    MatIconModule,
   ],
-  providers: [],
+  providers: [ProduitService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
