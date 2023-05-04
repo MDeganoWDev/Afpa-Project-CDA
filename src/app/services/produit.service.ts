@@ -23,7 +23,5 @@ export class ProduitService {
     );
   }
 
-  getProduitByName(produit: string): Observable<object> {
-    return  this.http.get(`https://world.openfoodfacts.org/cgi/search.pl?search_terms=${produit}&search_simple=1&action=process&json=1&page_size=20`);
-  }
+
 }
