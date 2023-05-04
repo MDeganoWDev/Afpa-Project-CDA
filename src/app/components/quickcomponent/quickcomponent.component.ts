@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HomeService } from 'src/app/services/home.service';
+import { ProduitService } from 'src/app/services/produit.service';
 
 @Component({
   selector: 'app-quickcomponent',
@@ -10,11 +10,11 @@ export class QuickcomponentComponent {
   
      products : any[] | undefined;
 
-    constructor(private homeService: HomeService) { }
+    constructor(private produitService: ProduitService) { }
   
   
     ngOnInit() {
-      this.homeService.getHomeData().subscribe(data => {
+      this.produitService.getHomeData().subscribe(data => {
         console.log(data.products);
         this.products = data.products});
         

@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FicheProduitComponent } from './Components/fiche-produit/fiche-produit.component';
-import { PageAcceuilComponent } from './page-acceuil/page-acceuil.component';
+import { FicheProduitComponent } from './components/fiche-produit/fiche-produit.component';
+import { QuickcomponentComponent } from './components/quickcomponent/quickcomponent.component';
 
 const routes: Routes = [
-  { path: '', component: PageAcceuilComponent },
+  { path: '', component: QuickcomponentComponent },
   { path: 'produit/:id', component: FicheProduitComponent },
 ];
 

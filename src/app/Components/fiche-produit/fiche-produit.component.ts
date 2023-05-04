@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProduitService } from '../../produit.service';
+import { ProduitService } from '../../services/produit.service';
 import { Produit } from '../../model/produit.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
