@@ -28,7 +28,8 @@
         'nutriscore-B': produit.nutriscore === 'b',
         'nutriscore-C': produit.nutriscore === 'c',
         'nutriscore-D': produit.nutriscore === 'd',
-        'nutriscore-E': produit.nutriscore === 'e'
+        'nutriscore-E': produit.nutriscore === 'e',
+        'score-null': produit.nutriscore === 'not-applicable'
       }">
         <a class="flex-row-center" href=""> <!-- renvoi vers la fiche santé -->
           <img class="mr-20 w-8 h-4" *ngIf="produit && produit.nutriscore" [src]="'https://static.openfoodfacts.org/images/attributes/nutriscore-'
@@ -46,6 +47,7 @@
         'nova-group-2': produit.nova === 2,
         'nova-group-3': produit.nova === 3,
         'nova-group-4': produit.nova === 4,
+        'score-null': produit.nova === 'unknown'
       }">
         <a class="flex-row-center" href=""> <!-- renvoi vers la fiche santé -->
           <img class="mr-20 w-4 h-4" *ngIf="produit && produit.nova" [src]="'https://static.openfoodfacts.org/images/attributes/nova-group-'
@@ -63,7 +65,8 @@
         'ecoscore-B': produit.ecoscore === 'b',
         'ecoscore-C': produit.ecoscore === 'c',
         'ecoscore-D': produit.ecoscore === 'd',
-        'ecoscore-E': produit.ecoscore === 'e'
+        'ecoscore-E': produit.ecoscore === 'e',
+        'score-null': produit.ecoscore === 'not-applicable'
       }">
         <a class="flex-row-center" href=""> <!-- renvoi vers la fiche santé -->
           <img class="mr-20 w-8 h-4" *ngIf="produit && produit.ecoscore" [src]="'https://static.openfoodfacts.org/images/attributes/ecoscore-'

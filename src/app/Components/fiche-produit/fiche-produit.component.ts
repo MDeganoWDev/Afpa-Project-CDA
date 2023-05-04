@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ProduitService } from '../../produit.service';
-import { Produit } from '../../model/produit.model';
+import { Produit } from 'src/app/model/produit.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { Subscription } from 'rxjs';
