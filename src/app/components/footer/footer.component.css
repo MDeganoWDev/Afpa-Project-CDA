@@ -1,6 +1,9 @@
 footer {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;   
+}
+.footer{
+    height: auto;
 }
 .images-container {
     /* border: #201a17 2px solid; */
