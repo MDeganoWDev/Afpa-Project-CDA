@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { ProduitService } from '../../services/produit.service';
-import { Produit } from '../../model/produit.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { Subscription } from 'rxjs';
+
+import { ProduitService } from '../../services/produit.service';
+import { Produit } from 'src/app/models/produit.model';
+
 
 @Component({
   selector: 'app-fiche-produit',

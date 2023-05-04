@@ -22,6 +22,9 @@ export class ProduitService {
       { observe: 'body' }
     );
   }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 6c56b5ad1025780033cb1bba8478d3e0c718e48a
 }

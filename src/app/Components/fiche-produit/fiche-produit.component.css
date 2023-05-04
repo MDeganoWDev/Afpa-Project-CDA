@@ -90,3 +90,11 @@ img {
 .nutriscore-E:hover, .nova-group-4:hover, .ecoscore-E:hover {
   background-color: #f7cdcd;
 }
+
+.score-null {
+  background-color: #c1c1c1;
+}
+
+.score-null:hover {
+  background-color: #9b9999;
+}
