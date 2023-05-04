@@ -4,7 +4,7 @@ import { SanteComponent } from './components/sante/sante.component';
 
 
 const routes: Routes = [
-  { path: 'produit/:id', component: SanteComponent }
+ 
 ];
 
 @NgModule({

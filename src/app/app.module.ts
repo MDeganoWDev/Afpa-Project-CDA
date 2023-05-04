@@ -15,6 +15,10 @@ import { SanteComponent } from './components/sante/sante.component';
 
 
 
+import { SanteComponent } from './components/sante/sante.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,SanteComponent
