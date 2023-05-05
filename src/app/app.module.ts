@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProduitService } from './services/produit.service';
 import { FicheProduitComponent } from './Components/fiche-produit/fiche-produit.component';
 import { QuickcomponentComponent } from './Components/quickcomponent/quickcomponent.component';
+import { SanteComponent } from './Components/sante/sante.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { QuickcomponentComponent } from './Components/quickcomponent/quickcompon
     FooterComponent,
     FicheProduitComponent,
     QuickcomponentComponent,
+    SanteComponent
   ],
   imports: [
     BrowserModule,

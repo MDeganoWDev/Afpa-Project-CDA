@@ -20,7 +20,17 @@
   background-color: white;
   list-style-type: none;
   box-shadow: 0px 15px 10px -15px #111;
+  border: none;
+  cursor: pointer;
+  
 }
+
+.container:hover {
+  background-color: rgb(226, 226, 226);
+
+
+}
+
 
 .list_product_img {
   width: 254px;
@@ -28,6 +38,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+
 }
 .list_product_img img {
   max-width: 100%;
@@ -36,6 +47,7 @@
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
+
 }
 
 .list_product_name {
@@ -48,6 +60,7 @@
   color: #000;
   padding: 15px;
   font-style: bold;
+
 }
 
 .list_product_sc {
@@ -57,6 +70,7 @@
   display: flex;
   margin: 0;
   margin-right: 10px;
+
 }
 
 .nutriscore-large {
@@ -65,6 +79,7 @@
   padding-top: 10px;
   margin-right: 10px;
   margin-left: 10px;
+
 }
 
 .ecoscore-large {
@@ -73,10 +88,12 @@
   height: auto;
   padding-top: 10px;
   margin-left: 10px;
+
 }
 
 .novascore {
   max-width: 100%;
   width: 90%;
   margin: 0;
+  
 }
