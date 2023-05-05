@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProduitService } from 'src/app/services/produit.service';
+
 
 @Component({
   selector: 'app-header',
@@ -10,10 +12,11 @@ export class HeaderComponent {
 
   chercheProduit!: string;
 
-  constructor(private produitService: ProduitService) {}
+  constructor(private produitService: ProduitService, private router: Router) {}
 
   chercher(){
     this.produitService.setData(this.chercheProduit);
+    this.router.navigate(['search/' + `${this.chercheProduit}`]);
   }
 
 }

@@ -1,5 +1,6 @@
-<div class="card-div flex-row-center w75 m-auto-lr">
-  <div class="card-div">
+<div class="container">
+  <div class="child_container">
+    <div>
     <img *ngIf="produit" [src]="produit.image_url" alt="" />
   </div>
   <div class="card-div bg-color pd-20">
@@ -18,8 +19,9 @@
     <P *ngIf="produit && produit.countries">Pays de vente : {{ produit.countries }}</P>
   </div>
 </div>
-
-<div class="card-div w75 m-auto-lr">
+</div>
+<div class="container">
+  <div class="child_container">
   <h1 class="pd-20">Correspondance avec vos préférences</h1>
   <div class="flex-row-center-space-betwee">
     <div class="flex-row-center-space-betwee">
@@ -80,4 +82,6 @@
     </div>
   </div>
 </div>
+</div>
+<!-- fiche-sante.html -->
 <app-sante></app-sante>

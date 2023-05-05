@@ -18,7 +18,7 @@ export class ProduitService {
   constructor(private http: HttpClient) {}
 
   getHomeData(): Observable<any> {
-    return this.http.get('https://world.openfoodfacts.org?json=true');
+    return this.http.get('https://world.openfoodfacts.org?json=true&page_size=49');
   }
 
   getProduitByName(produit: string): Observable<object> {

@@ -6,6 +6,12 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  width: 90%;
+  height: 80%;
+  overflow-y: scroll;
+  margin-left: 5%;
+  margin-top: 10px;
+
 }
 
 .container {

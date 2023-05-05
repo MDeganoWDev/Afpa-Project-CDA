@@ -28,9 +28,11 @@ export class QuickcomponentComponent implements OnInit{
         }
       });
 
-      this.produitService.getHomeData().subscribe(data => {
-        console.log(data.products);
-        this.products = data.products});
+        this.produitService.getHomeData().subscribe(data => {
+          console.log(data.products);
+          this.products = data.products});
+
+
         
     }
 }    
