@@ -10,7 +10,6 @@ import { ProduitService } from 'src/app/services/produit.service';
 export class QuickcomponentComponent implements OnInit{
   
      products : any[] | undefined;
-     inputRecherche: string | null = null;
      data: any;
 
     constructor(private produitService: ProduitService) { }
@@ -18,22 +17,10 @@ export class QuickcomponentComponent implements OnInit{
     
   
     ngOnInit(): void {
-      this.produitService.currentProduct.subscribe(product => {
-        this.inputRecherche = product;
-        if (this.inputRecherche !== null) {
-          this.produitService.getProduitByName(this.inputRecherche).subscribe((data: any) => {
-          this.products = data.products;
-          console.log(this.products);
-          });
-        }
-      });
-
         this.produitService.getHomeData().subscribe(data => {
           console.log(data.products);
           this.products = data.products});
-
-
-        
+       
     }
 }    
        
